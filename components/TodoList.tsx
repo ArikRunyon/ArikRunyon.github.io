@@ -2,7 +2,7 @@ import { Database } from '@/lib/schema'
 import { Session, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useEffect, useState } from 'react'
 
-type Ingredients = Database['public']['Tables']['']
+type Ingredients = Database['public']['Tables']['ingredients']['row']
 
 export default function TodoList({ session }: { session: Session }) {
   const supabase = useSupabaseClient<Database>()
