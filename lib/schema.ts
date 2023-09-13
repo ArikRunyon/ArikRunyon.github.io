@@ -9,26 +9,32 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
-      todos: {
+      ingredients: {
         Row: {
           id: number
-          inserted_at: string
-          is_complete: boolean | null
-          task: string | null
+          created_at: string
+          ingredient_name: string
+          benefit: string | ""
+          risks: string | ""
+          easily_grown: boolean
           user_id: string
         }
         Insert: {
           id?: number
-          inserted_at?: string
-          is_complete?: boolean | null
-          task?: string | null
+          created_at?: string
+          ingredient_name: string
+          benefit: string | ""
+          risks?: string | ""
+          easily_grown: boolean
           user_id: string
         }
         Update: {
           id?: number
-          inserted_at?: string
-          is_complete?: boolean | null
-          task?: string | null
+          created_at?: string
+          ingredient_name?: string
+          benefit?: string | ""
+          risks?: string | ""
+          easily_grown?: boolean
           user_id?: string
         }
       }
