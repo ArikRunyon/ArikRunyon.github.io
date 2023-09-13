@@ -6,48 +6,47 @@ type Ingredients = Database['public']['Tables']['ingredients']['Row']
 
 export default function IngredientList({ session }: { session: Session }) {
   const supabase = useSupabaseClient<Database>()
-  const [todos, setTodos] = useState<Ingredients[]>([])
+  const [ingredients, setIngredients] = useState<Ingredients[]>([])
   const [newTaskText, setNewTaskText] = useState('')
   const [errorText, setErrorText] = useState('')
 
   const user = session.user
 
   useEffect(() => {
-    const fetchTodos = async () => {
-      const { data: todos, error } = await supabase
-        .from('todos')
+    const fetchIngredients = async () => {
+      const { data: ingredients, error } = await supabase
+        .from('ingredients')
         .select('*')
         .order('id', { ascending: true })
 
       if (error) console.log('error', error)
-      else setTodos(todos)
+      else setIngredients(ingredients)
     }
 
-    fetchTodos()
+    fetchIngredients()
   }, [supabase])
 
-  const addTodo = async (taskText: string) => {
-    let task = taskText.trim()
-    if (task.length) {
-      const { data: todo, error } = await supabase
-        .from('todos')
-        .insert({ task, user_id: user.id })
-        .select()
-        .single()
+  const addIngredient = async (taskText: string) => {
+    // if () {
+    //   const { data: ingredient, error } = await supabase
+    //     .from('ingredients')
+    //     .insert({ user_id: user.id })
+    //     .select()
+    //     .single()
 
-      if (error) {
-        setErrorText(error.message)
-      } else {
-        setTodos([...todos, todo])
-        setNewTaskText('')
-      }
-    }
+    //   if (error) {
+    //     setErrorText(error.message)
+    //   } else {
+    //     setIngredients([...ingredients, ingredient])
+    //     setNewTaskText('')
+    //   }
+    // }
   }
 
-  const deleteTodo = async (id: number) => {
+  const deleteIngredient = async (id: number) => {
     try {
-      await supabase.from('todos').delete().eq('id', id).throwOnError()
-      setTodos(todos.filter((x) => x.id != id))
+      await supabase.from('ingredients').delete().eq('id', id).throwOnError()
+      setIngredients(ingredients.filter((x) => x.id != id))
     } catch (error) {
       console.log('error', error)
     }
@@ -59,7 +58,7 @@ export default function IngredientList({ session }: { session: Session }) {
       <form
         onSubmit={(e) => {
           e.preventDefault()
-          addTodo(newTaskText)
+          addIngredient(newTaskText)
         }}
         className="flex gap-2 my-2"
       >
@@ -80,8 +79,8 @@ export default function IngredientList({ session }: { session: Session }) {
       {!!errorText && <Alert text={errorText} />}
       <div className="bg-white shadow overflow-hidden rounded-md">
         <ul>
-          {todos.map((todo) => (
-            <Todo key={todo.id} todo={todo} onDelete={() => deleteTodo(todo.id)} />
+          {ingredients.map((ingredient) => (
+            <Ingredient key={ingredient.id} todo={ingredient} onDelete={() => deleteIngredient(ingredient.id)} />
           ))}
         </ul>
       </div>
@@ -89,38 +88,19 @@ export default function IngredientList({ session }: { session: Session }) {
   )
 }
 
-const Todo = ({ todo, onDelete }: { todo: Todos; onDelete: () => void }) => {
+const Ingredient = ({ todo: ingredient, onDelete }: { todo: Ingredients; onDelete: () => void }) => {
   const supabase = useSupabaseClient<Database>()
-  const [isCompleted, setIsCompleted] = useState(todo.is_complete)
-
-  const toggle = async () => {
-    try {
-      const { data } = await supabase
-        .from('todos')
-        .update({ is_complete: !isCompleted })
-        .eq('id', todo.id)
-        .throwOnError()
-        .select()
-        .single()
-
-      if (data) setIsCompleted(data.is_complete)
-    } catch (error) {
-      console.log('error', error)
-    }
-  }
 
   return (
     <li className="w-full block cursor-pointer hover:bg-gray-200 focus:outline-none focus:bg-gray-200 transition duration-150 ease-in-out">
       <div className="flex items-center px-4 py-4 sm:px-6">
         <div className="min-w-0 flex-1 flex items-center">
-          <div className="text-sm leading-5 font-medium truncate">{todo.task}</div>
+          <div className="text-sm leading-5 font-medium truncate">{ingredient.task}</div>
         </div>
         <div>
           <input
             className="cursor-pointer"
-            onChange={(e) => toggle()}
             type="checkbox"
-            checked={isCompleted ? true : false}
           />
         </div>
         <button
