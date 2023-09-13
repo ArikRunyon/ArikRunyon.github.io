@@ -2,11 +2,11 @@ import { Database } from '@/lib/schema'
 import { Session, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useEffect, useState } from 'react'
 
-type Todos = Database['public']['Tables']['todos']['Row']
+type Ingredients = Database['public']['Tables']['']
 
 export default function TodoList({ session }: { session: Session }) {
   const supabase = useSupabaseClient<Database>()
-  const [todos, setTodos] = useState<Todos[]>([])
+  const [todos, setTodos] = useState<Ingredients[]>([])
   const [newTaskText, setNewTaskText] = useState('')
   const [errorText, setErrorText] = useState('')
 
