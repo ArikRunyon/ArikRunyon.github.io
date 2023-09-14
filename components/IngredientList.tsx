@@ -83,6 +83,7 @@ export default function IngredientList({ session }: { session: Session }) {
         }}
         className="flex gap-2 my-2"
       >
+        Name: 
         <input
           className="rounded w-full p-2"
           type="text"
@@ -93,6 +94,7 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewIngredientName(e.target.value)
           }}
         />
+        Benefits: 
         <input
           className="rounded w-full p-2"
           type="text"
@@ -103,6 +105,7 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewBenefit(e.target.value)
           }}
         />
+        Risks: 
         <input
           className="rounded w-full p-2"
           type="text"
@@ -113,6 +116,7 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewRisks(e.target.value)
           }}
         />
+        Easily Grown: 
         <input
             className="cursor-pointer"
             type="checkbox"
@@ -145,10 +149,10 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
     <li className="w-full block cursor-pointer hover:bg-gray-200 focus:outline-none focus:bg-gray-200 transition duration-150 ease-in-out">
       <div className="flex items-center px-4 py-4 sm:px-6">
         <div className="min-w-0 flex-1 flex items-center">
-          <div className="text-sm leading-5 font-medium truncate">{ingredient.ingredient_name}</div>
-          <div className="text-sm leading-5 font-medium truncate">{ingredient.benefit}</div>
-          <div className="text-sm leading-5 font-medium truncate">{ingredient.risks}</div>
-          <div className="text-sm leading-5 font-medium truncate">{ingredient.easily_grown}</div>
+          <div className="text-sm leading-5 font-medium truncate">Name: {ingredient.ingredient_name}</div>
+          <div className="text-sm leading-5 font-medium truncate">Benefits: {ingredient.benefit}</div>
+          <div className="text-sm leading-5 font-medium truncate">Risks: {ingredient.risks}</div>
+          <div className="text-sm leading-5 font-medium truncate">Easily Grown: {ingredient.easily_grown ? 'Yes' : 'No'}</div>
         </div>
         <div>
         </div>
