@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
-import IngredientList from '@/components/TodoList'
+import IngredientList from '@/components/IngredientList'
 
 export default function Home() {
   const session = useSession()
