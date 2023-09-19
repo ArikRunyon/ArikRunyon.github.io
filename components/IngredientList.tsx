@@ -83,7 +83,7 @@ export default function IngredientList({ session }: { session: Session }) {
         }}
         className="flex gap-2 my-2"
       >
-        <div>
+        <div style={{width: '30rem'}}>
         Name: 
         <input
           className="rounded w-full p-2"
