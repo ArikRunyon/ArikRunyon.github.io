@@ -167,7 +167,7 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
   const supabase = useSupabaseClient<Database>()
 
   return (
-      <div>
+      <div style={{width: '15rem', backgroundColor: 'white'}}>
           <div className="text-sm leading-5 font-medium truncate">Name: {ingredient.ingredient_name}</div>
           <div className="text-sm leading-5 font-medium truncate">Benefits: {ingredient.benefit}</div>
           <div className="text-sm leading-5 font-medium truncate">Risks: {ingredient.risks}</div>
