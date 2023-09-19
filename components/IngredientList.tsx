@@ -167,7 +167,7 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
   const supabase = useSupabaseClient<Database>()
 
   return (
-      <div className="flex items-center px-4 py-4 sm:px-6">
+      <div>
         {/* <div className="min-w-0 flex-1 flex items-center"> */}
           <div className="text-sm leading-5 font-medium truncate">Name: {ingredient.ingredient_name}</div>
           <div className="text-sm leading-5 font-medium truncate">Benefits: {ingredient.benefit}</div>
