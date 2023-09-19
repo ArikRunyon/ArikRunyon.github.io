@@ -101,6 +101,8 @@ export default function IngredientList({ session }: { session: Session }) {
         <textarea
           className="rounded w-full p-2"
           placeholder="Super Strength"
+          maxLength={256}
+          rows={5}
           value={newBenefit}
           onChange={(e) => {
             setErrorText('')
