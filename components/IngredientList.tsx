@@ -103,6 +103,7 @@ export default function IngredientList({ session }: { session: Session }) {
           placeholder="Super Strength"
           maxLength={256}
           rows={5}
+          style={{resize: 'none'}}
           value={newBenefit}
           onChange={(e) => {
             setErrorText('')
@@ -112,10 +113,12 @@ export default function IngredientList({ session }: { session: Session }) {
         </div>
         <div>
         Risks: 
-        <input
+        <textarea
           className="rounded w-full p-2"
-          type="textarea"
           placeholder="Cancer"
+          maxLength={256}
+          rows={5}
+          style={{resize: 'none'}}
           value={newRisks}
           onChange={(e) => {
             setErrorText('')
