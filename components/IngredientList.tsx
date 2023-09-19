@@ -74,7 +74,7 @@ export default function IngredientList({ session }: { session: Session }) {
   }
 
   return (
-    <div className="w-full">
+    <div>
       <h1>Ingredient List.</h1>
       <form
         onSubmit={(e) => {
