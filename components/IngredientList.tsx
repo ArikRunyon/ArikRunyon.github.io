@@ -154,7 +154,7 @@ export default function IngredientList({ session }: { session: Session }) {
         </button>
       </form>
       {!!errorText && <Alert text={errorText} />}
-      <div className="bg-white shadow overflow-hidden rounded-md">
+      <div>
           {ingredients.map((ingredient) => (
             <Ingredient key={ingredient.id} ingredient={ingredient} onDelete={() => deleteIngredient(ingredient.id)} />
           ))}
@@ -168,12 +168,10 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
 
   return (
       <div>
-        {/* <div className="min-w-0 flex-1 flex items-center"> */}
           <div className="text-sm leading-5 font-medium truncate">Name: {ingredient.ingredient_name}</div>
           <div className="text-sm leading-5 font-medium truncate">Benefits: {ingredient.benefit}</div>
           <div className="text-sm leading-5 font-medium truncate">Risks: {ingredient.risks}</div>
           <div className="text-sm leading-5 font-medium truncate">Easily Grown: {ingredient.easily_grown ? 'Yes' : 'No'}</div>
-        {/* </div> */}
         <button
           onClick={(e) => {
             e.preventDefault()
