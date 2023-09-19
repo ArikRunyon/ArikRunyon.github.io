@@ -125,26 +125,26 @@ export default function IngredientList({ session }: { session: Session }) {
         <div style={{width: '15rem'}}>
           Easily Grown: <br/>
           <div>
+            <fieldset>
             <input
                 className="cursor-pointer"
                 type="radio"
                 id='yesbox'
-                defaultChecked={true}
                 onChange={(e) => {
                   setErrorText('')
                   setNewEasilyGrown(e.target.checked)
                 }}
-              /> Yes
+              /> Yes 
               <input
                 className="cursor-pointer"
                 type="radio"
                 id='nobox'
-                defaultChecked={true}
                 onChange={(e) => {
                   setErrorText('')
                   setNewEasilyGrown(e.target.checked)
                 }}
               /> No
+              </fieldset>
           </div>
         </div>
         <button className="btn-black" type="submit">
