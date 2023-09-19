@@ -83,6 +83,7 @@ export default function IngredientList({ session }: { session: Session }) {
         }}
         className="flex gap-2 my-2"
       >
+        <div>
         Name: 
         <input
           className="rounded w-full p-2"
@@ -94,6 +95,8 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewIngredientName(e.target.value)
           }}
         />
+        </div>
+        <div>
         Benefits: 
         <input
           className="rounded w-full p-2"
@@ -105,6 +108,8 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewBenefit(e.target.value)
           }}
         />
+        </div>
+        <div>
         Risks: 
         <input
           className="rounded w-full p-2"
@@ -116,6 +121,8 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewRisks(e.target.value)
           }}
         />
+        </div>
+        <div>
         Easily Grown: 
         <input
             className="cursor-pointer"
@@ -126,6 +133,7 @@ export default function IngredientList({ session }: { session: Session }) {
               setNewEasilyGrown(e.target.checked)
             }}
           />
+          </div>
         <button className="btn-black" type="submit">
           Add
         </button>
