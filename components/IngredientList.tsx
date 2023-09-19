@@ -95,7 +95,6 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewIngredientName(e.target.value)
           }}
         />
-        </div>
         <div>
         Benefits: 
         <textarea
@@ -110,6 +109,8 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewBenefit(e.target.value)
           }}
         />
+        </div>
+        <div>
         Risks: 
         <textarea
           className="rounded w-full p-2"
@@ -150,6 +151,7 @@ export default function IngredientList({ session }: { session: Session }) {
               /> No
             </div>
           </div>
+        </div>
         </div>
         <button className="btn-black" type="submit" style={{width: '10rem'}}>
           Add
