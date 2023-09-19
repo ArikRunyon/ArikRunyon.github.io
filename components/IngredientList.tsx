@@ -100,7 +100,7 @@ export default function IngredientList({ session }: { session: Session }) {
         Benefits: 
         <input
           className="rounded w-full p-2"
-          type="text"
+          type="textarea"
           placeholder="Super Strength"
           value={newBenefit}
           onChange={(e) => {
@@ -113,7 +113,7 @@ export default function IngredientList({ session }: { session: Session }) {
         Risks: 
         <input
           className="rounded w-full p-2"
-          type="text"
+          type="textarea"
           placeholder="Cancer"
           value={newRisks}
           onChange={(e) => {
