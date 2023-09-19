@@ -83,7 +83,7 @@ export default function IngredientList({ session }: { session: Session }) {
         }}
         className="flex gap-2 my-2"
       >
-        <div style={{width: '15rem'}}>
+        <div>
         Name: 
         <input
           className="rounded w-full p-2"
@@ -96,7 +96,7 @@ export default function IngredientList({ session }: { session: Session }) {
           }}
         />
         </div>
-        <div style={{width: '15rem'}}>
+        <div>
         Benefits: 
         <input
           className="rounded w-full p-2"
@@ -109,7 +109,7 @@ export default function IngredientList({ session }: { session: Session }) {
           }}
         />
         </div>
-        <div style={{width: '15rem'}}>
+        <div>
         Risks: 
         <input
           className="rounded w-full p-2"
@@ -122,7 +122,7 @@ export default function IngredientList({ session }: { session: Session }) {
           }}
         />
         </div>
-        <div style={{width: '15rem'}}>
+        <div>
           Easily Grown: <br/>
           <div>
             <div>
