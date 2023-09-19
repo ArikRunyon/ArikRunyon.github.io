@@ -185,6 +185,7 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
             e.stopPropagation()
             onDelete()
           }}
+          className="btn-black"
         >
           Delete
         </button>
