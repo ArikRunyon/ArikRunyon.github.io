@@ -536,24 +536,12 @@ video {
   margin-bottom: 3rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-full {
@@ -564,16 +552,8 @@ video {
   min-height: 100vh;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .w-full {
   width: 100%;
-}
-
-.min-w-0 {
-  min-width: 0px;
 }
 
 .min-w-full {
@@ -584,12 +564,8 @@ video {
   max-width: 24rem;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.cursor-pointer {
-  cursor: pointer;
+.resize {
+  resize: both;
 }
 
 .flex-col {
@@ -608,10 +584,6 @@ video {
   gap: 0.5rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -624,10 +596,6 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.border-2 {
-  border-width: 2px;
 }
 
 .border-b {
@@ -659,16 +627,6 @@ video {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .pb-2 {
@@ -719,22 +677,6 @@ video {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-150 {
-  transition-duration: 150ms;
-}
-
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Write your own custom component styles here */
@@ -808,26 +750,6 @@ h1 {
   display: block;
 }
 
-.hover\:border-black:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.hover\:bg-gray-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.focus\:bg-gray-200:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 @media (min-width: 640px) {
   .sm\:h-auto {
     height: auto;
@@ -835,10 +757,5 @@ h1 {
 
   .sm\:w-2\/5 {
     width: 40%;
-  }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 }

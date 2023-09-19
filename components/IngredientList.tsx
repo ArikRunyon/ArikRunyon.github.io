@@ -95,7 +95,7 @@ export default function IngredientList({ session }: { session: Session }) {
             setNewIngredientName(e.target.value)
           }}
         />
-        </div>
+        </div><br/>
         <div>
         Benefits: 
         <textarea
