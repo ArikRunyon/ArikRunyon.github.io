@@ -127,6 +127,7 @@ export default function IngredientList({ session }: { session: Session }) {
           <div>
             <fieldset>
               <input
+                  name='easygrown'
                   type="radio"
                   id='yesbox'
                   onChange={(e) => {
@@ -135,6 +136,7 @@ export default function IngredientList({ session }: { session: Session }) {
                   }}
               /> Yes 
                 <input
+                  name='easygrown'
                   type="radio"
                   id='nobox'
                   onChange={(e) => {
