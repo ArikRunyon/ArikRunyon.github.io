@@ -152,10 +152,10 @@ export default function IngredientList({ session }: { session: Session }) {
             </div>
           </div>
         </div>
-        </div>
         <button className="btn-black" type="submit" style={{width: '10rem'}}>
           Add
         </button>
+        </div>
       </form>
       {!!errorText && <Alert text={errorText} />}
       <div style={{display: 'flex', flexFlow: 'row', flexWrap: 'wrap'}}>
