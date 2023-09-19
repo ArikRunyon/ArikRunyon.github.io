@@ -123,7 +123,7 @@ export default function IngredientList({ session }: { session: Session }) {
         />
         </div>
         <div style={{width: '15rem'}}>
-        Easily Grown: 
+        Easily Grown: <br/>
         <input
             className="cursor-pointer"
             type="checkbox"
