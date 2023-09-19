@@ -124,8 +124,7 @@ export default function IngredientList({ session }: { session: Session }) {
         </div>
         <div style={{width: '15rem'}}>
           Easily Grown: <br/>
-          <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
-            <fieldset>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
               <input
                   name='easygrown'
                   type="radio"
@@ -144,7 +143,6 @@ export default function IngredientList({ session }: { session: Session }) {
                     setNewEasilyGrown(false)
                   }}
               /> No
-            </fieldset>
           </div>
         </div>
         <button className="btn-black" type="submit">
