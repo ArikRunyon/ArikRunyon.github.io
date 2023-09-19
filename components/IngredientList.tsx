@@ -155,11 +155,9 @@ export default function IngredientList({ session }: { session: Session }) {
       </form>
       {!!errorText && <Alert text={errorText} />}
       <div className="bg-white shadow overflow-hidden rounded-md">
-        <ul>
           {ingredients.map((ingredient) => (
             <Ingredient key={ingredient.id} ingredient={ingredient} onDelete={() => deleteIngredient(ingredient.id)} />
           ))}
-        </ul>
       </div>
     </div>
   )
@@ -169,7 +167,6 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
   const supabase = useSupabaseClient<Database>()
 
   return (
-    <li className="w-full block cursor-pointer hover:bg-gray-200 focus:outline-none focus:bg-gray-200 transition duration-150 ease-in-out">
       <div className="flex items-center px-4 py-4 sm:px-6">
         <div className="min-w-0 flex-1 flex items-center">
           <div className="text-sm leading-5 font-medium truncate">Name: {ingredient.ingredient_name}</div>
@@ -190,7 +187,6 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
           Delete
         </button>
       </div>
-    </li>
   )
 }
 
