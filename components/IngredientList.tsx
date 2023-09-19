@@ -75,13 +75,12 @@ export default function IngredientList({ session }: { session: Session }) {
 
   return (
     <div className="w-full">
-      <h1 className="mb-12">Ingredient List.</h1>
+      <h1>Ingredient List.</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault()
           addIngredient(newIngredient)
         }}
-        className="flex gap-2 my-2"
       >
         <div style={{width: '30rem'}}>
         Name: 
