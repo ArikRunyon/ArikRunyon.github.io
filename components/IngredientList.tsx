@@ -165,10 +165,9 @@ export default function IngredientList({ session }: { session: Session }) {
 
 const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredients; onDelete: () => void }) => {
   const supabase = useSupabaseClient<Database>()
-  const bgColor = ingredient.easily_grown ? 'green' : 'red'
 
   return (
-      <div style={{width: '15rem', backgroundColor: bgColor, padding: '1rem', display: 'flex', flexDirection: 'column'}}>
+      <div style={{width: '15rem', backgroundColor: 'gray', padding: '1rem', display: 'flex', flexDirection: 'column'}}>
           <div className="text-sm leading-5 font-medium truncate">Name: {ingredient.ingredient_name}</div>
           <div className="text-sm leading-5 font-medium truncate">Benefits: {ingredient.benefit}</div>
           <div className="text-sm leading-5 font-medium truncate">Risks: {ingredient.risks}</div>
