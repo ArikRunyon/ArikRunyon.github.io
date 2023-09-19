@@ -124,7 +124,7 @@ export default function IngredientList({ session }: { session: Session }) {
         </div>
         <div style={{width: '15rem'}}>
           Easily Grown: <br/>
-          <div style={{display: 'flex'}}>
+          <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
             <fieldset>
               <input
                   name='easygrown'
