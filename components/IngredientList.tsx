@@ -98,9 +98,8 @@ export default function IngredientList({ session }: { session: Session }) {
         </div>
         <div>
         Benefits: 
-        <input
+        <textarea
           className="rounded w-full p-2"
-          type="textarea"
           placeholder="Super Strength"
           value={newBenefit}
           onChange={(e) => {
