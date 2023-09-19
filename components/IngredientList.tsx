@@ -185,7 +185,6 @@ const Ingredient = ({ ingredient: ingredient, onDelete }: { ingredient: Ingredie
             e.stopPropagation()
             onDelete()
           }}
-          className="w-4 h-4 ml-2 border-2 hover:border-black rounded"
         >
           Delete
         </button>
