@@ -9,20 +9,27 @@ export default function Navbar({ session }: { session: Session }) {
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
             <div>
                 <button
-                    className="btn-black">View Ingredients</button>
+                    className="btn-black"
+                    style={{margin: '0.5rem'}}>View Ingredients</button>
                 <button
-                    className="btn-black">Add Ingredient</button>
+                    className="btn-black"
+                    style={{margin: '0.5rem'}}>Add Ingredient</button>
                 <button
-                    className="btn-black">View Recipes</button>
+                    className="btn-black"
+                    style={{margin: '0.5rem'}}>View Recipes</button>
                 <button
-                    className="btn-black">Add Recipe</button>
+                    className="btn-black"
+                    style={{margin: '0.5rem'}}>Add Recipe</button>
                 <button
-                    className="btn-black">View Products</button>
+                    className="btn-black"
+                    style={{margin: '0.5rem'}}>View Products</button>
                 <button
-                    className="btn-black">Add Products</button>
+                    className="btn-black"
+                    style={{margin: '0.5rem'}}>Add Products</button>
             </div>
             <button
                 className="btn-black"
+                style={{margin: '0.5rem'}}
                 onClick={async () => {
                     const { error } = await supabase.auth.signOut()
                     if (error) console.log('Error logging out:', error.message)
