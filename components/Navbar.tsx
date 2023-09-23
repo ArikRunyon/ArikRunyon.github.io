@@ -8,12 +8,18 @@ export default function Navbar({ session }: { session: Session }) {
     return (
         <div style={{display: 'flex', flexDirection: 'row'}}>
             <div>
-                <button>View Ingredients</button>
-                <button>Add Ingredient</button>
-                <button>View Recipes</button>
-                <button>Add Recipe</button>
-                <button>View Products</button>
-                <button>Add Products</button>
+                <button
+                    className="btn-black mt-12">View Ingredients</button>
+                <button
+                    className="btn-black mt-12">Add Ingredient</button>
+                <button
+                    className="btn-black mt-12">View Recipes</button>
+                <button
+                    className="btn-black mt-12">Add Recipe</button>
+                <button
+                    className="btn-black mt-12">View Products</button>
+                <button
+                    className="btn-black mt-12">Add Products</button>
             </div>
             <button
                 className="btn-black mt-12"
