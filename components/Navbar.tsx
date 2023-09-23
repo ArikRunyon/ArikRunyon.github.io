@@ -1,5 +1,6 @@
 import { Session, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export default function Navbar({ session }: { session: Session }) {
 
@@ -10,12 +11,11 @@ export default function Navbar({ session }: { session: Session }) {
     return (
         <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#97935C'}}>
             <div>
-                <button
-                    className="btn-black"
-                    style={{margin: '0.5rem'}}
-                    onClick={()=>{
-                        push('/viewingredients')
-                    }}>View Ingredients</button>
+                <Link href={'/viewingredients'}>
+                    <button
+                        className="btn-black"
+                        style={{margin: '0.5rem'}}>View Ingredients</button>
+                </Link>
                 <button
                     className="btn-black"
                     style={{margin: '0.5rem'}}
