@@ -156,7 +156,7 @@ export default function IngredientList({ session }: { session: Session }) {
         </button>
         </div>
       </form>
-      {!!errorText && <Alert text={errorText} />}
+      {!!errorText && <Alert text={errorText} />}<br/>
       <div style={{display: 'flex', flexFlow: 'row', flexWrap: 'wrap'}}>
           {ingredients.map((ingredient) => (
             <Ingredient key={ingredient.id} ingredient={ingredient} onDelete={() => deleteIngredient(ingredient.id)} />
