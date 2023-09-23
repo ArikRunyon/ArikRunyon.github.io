@@ -6,7 +6,7 @@ export default function Navbar({ session }: { session: Session }) {
     const supabase = useSupabaseClient()
 
     return (
-        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#8BE3E1'}}>
             <div>
                 <button
                     className="btn-black"

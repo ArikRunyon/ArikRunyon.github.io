@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {session ? <Navbar session={session}/> : null}
-      <div style={{backgroundColor: '#d4ffb2'}}>
+      <div style={{backgroundColor: '#D3F7AD'}}>
         {!session ? (
           <div className="min-w-full min-h-screen flex items-center justify-center">
             <div className="flex justify-center items-center p-4">

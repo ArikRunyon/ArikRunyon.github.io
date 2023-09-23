@@ -74,7 +74,7 @@ export default function IngredientList({ session }: { session: Session }) {
   }
 
   return (
-    <div style={{border: 'solid', borderRadius: '1rem', borderColor: '#2db83d'}}>
+    <div style={{border: 'solid', borderRadius: '1rem', borderColor: '#95BB76'}}>
       <h1>Ingredient List.</h1>
       <form
         onSubmit={(e) => {
