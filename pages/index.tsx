@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Navbar from '@/components/Navbar'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 import IngredientList from '@/components/IngredientList'
@@ -15,6 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {session ? <Navbar session={session}/> : null}
       <div style={{backgroundColor: '#d4ffb2'}}>
         {!session ? (
           <div className="min-w-full min-h-screen flex items-center justify-center">
@@ -33,15 +35,6 @@ export default function Home() {
             style={{ minWidth: 250, margin: 'auto' }}
           >
             <IngredientList session={session} />
-            <button
-              className="btn-black mt-12"
-              onClick={async () => {
-                const { error } = await supabase.auth.signOut()
-                if (error) console.log('Error logging out:', error.message)
-              }}
-            >
-              Logout
-            </button>
           </div>
         )}
       </div>
