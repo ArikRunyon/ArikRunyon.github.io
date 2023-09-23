@@ -6,7 +6,7 @@ export default function Navbar({ session }: { session: Session }) {
     const supabase = useSupabaseClient()
 
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
             <div>
                 <button>View Ingredients</button>
                 <button>Add Ingredient</button>
